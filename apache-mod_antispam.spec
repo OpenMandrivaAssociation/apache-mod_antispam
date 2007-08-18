@@ -6,7 +6,7 @@
 Summary:	Mod_antispam is an apache module which can control referer spam
 Name:		apache-%{mod_name}
 Version:	1.0
-Release:	%mkrel 4
+Release:	%mkrel 5
 Group:		System/Servers
 License:	Apache License
 URL:		http://bluecoara.net/item44/cat9.html
@@ -46,9 +46,6 @@ install -d %{buildroot}/var/log/httpd
 install -m0755 .libs/*.so %{buildroot}%{_libdir}/apache-extramodules/
 bzcat %{SOURCE1} > %{buildroot}%{_sysconfdir}/httpd/modules.d/%{mod_conf}
 
-install -d %{buildroot}%{_var}/www/html/addon-modules
-ln -s ../../../..%{_docdir}/%{name}-%{version} %{buildroot}%{_var}/www/html/addon-modules/%{name}-%{version}
-
 touch %{buildroot}/var/log/httpd/antispam.white
 touch %{buildroot}/var/log/httpd/antispam.black
 touch %{buildroot}/var/log/httpd/antispam.black.auto
@@ -74,11 +71,8 @@ fi
 %doc AUTHORS CHANGES INSTALL README TODO httpd.conf.sample
 %attr(0644,root,root) %config(noreplace) %{_sysconfdir}/httpd/modules.d/%{mod_conf}
 %attr(0755,root,root) %{_libdir}/apache-extramodules/%{mod_so}
-%{_var}/www/html/addon-modules/*
 # this is prone to change later, leave as is for now
 %attr(0644,apache,apache) %config(noreplace) /var/log/httpd/antispam.white
 %attr(0644,apache,apache) %config(noreplace) /var/log/httpd/antispam.black
 %attr(0644,apache,apache) %config(noreplace) /var/log/httpd/antispam.black.auto
 %attr(0644,apache,apache) %config(noreplace) /var/log/httpd/antispam.white.auto
-
-
