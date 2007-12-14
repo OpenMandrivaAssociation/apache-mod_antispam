@@ -6,7 +6,7 @@
 Summary:	Mod_antispam is an apache module which can control referer spam
 Name:		apache-%{mod_name}
 Version:	1.0
-Release:	%mkrel 6
+Release:	%mkrel 7
 Group:		System/Servers
 License:	Apache License
 URL:		http://bluecoara.net/item44/cat9.html
