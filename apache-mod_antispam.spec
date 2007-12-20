@@ -20,6 +20,7 @@ Requires(pre):  apache >= 2.2.0
 Requires:	apache-conf >= 2.2.0
 Requires:	apache >= 2.2.0
 BuildRequires:  apache-devel >= 2.2.0
+BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 mod_antispam is an Apache-2/Apache-2.1 module that can control
