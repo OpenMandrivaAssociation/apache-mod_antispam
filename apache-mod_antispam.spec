@@ -3,7 +3,7 @@
 %define mod_conf A41_%{mod_name}.conf
 %define mod_so %{mod_name}.so
 
-Summary:	Mod_antispam is an apache module which can control referer spam
+Summary:	Apache module which can control referer spam
 Name:		apache-%{mod_name}
 Version:	1.0
 Release:	%mkrel 7
