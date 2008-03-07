@@ -6,7 +6,7 @@
 Summary:	Apache module which can control referer spam
 Name:		apache-%{mod_name}
 Version:	1.0
-Release:	%mkrel 8
+Release:	%mkrel 9
 Group:		System/Servers
 License:	Apache License
 URL:		http://bluecoara.net/item44/cat9.html
