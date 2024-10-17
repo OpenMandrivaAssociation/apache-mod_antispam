@@ -9,7 +9,7 @@ Version:	1.0
 Release:	18
 Group:		System/Servers
 License:	Apache License
-URL:		http://bluecoara.net/item44/cat9.html
+URL:		https://bluecoara.net/item44/cat9.html
 Source0:	http://bluecoara.net/download/mod_antispam/%{mod_name}-%{version}.tar.bz2
 Source1:	%{mod_conf}.bz2
 Patch0:		mod_antispam-1.0-apache220.diff
